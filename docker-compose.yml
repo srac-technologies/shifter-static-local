@@ -8,6 +8,7 @@ services:
       - 8443:443
     volumes:
       - "./volume/app:/var/www/html/web/wp/wp-content"
+      - plugindata:/var/www/html/web/wp/wp-content/plugins
     environment:
       - SERVICE_PORT=8443
       # - SERVICE_DOMAIN=127.0.0.1
@@ -29,3 +30,9 @@ services:
       - "./volume/db:/var/lib/mysql"
     command:
       - --sql-mode=STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION
+  plugins:
+    image: getshifter/headless-plugins:stable
+    volumes:
+      - plugindata:/srv/plugins
+volumes:
+  plugindata:
