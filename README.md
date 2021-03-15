@@ -19,18 +19,7 @@ docker-compose up -d
 Visit [https://127.0.0.1:8443](https://127.0.0.1:8443) in your browser.
 
 ## docker-composした後
-- PluginをActivate
-  - Advanced Custom Fields
-    - 記事属性を追加するのに必要
-  - Code Snippets
-    - カスタムブロックを追加するために必要
-  - WP GraphQL
-    - WordpressでGraphQLを有効にするために必要
-  - WP GraphQL Gutenberg
-    - Post.blocksを有効にするもの
-  - WPGraphQL for Advanced Custom Fields
-- Enable Public Introspectionをチェック
-
+各種プラグイ入れてください。
 
 ### Upgrade mysql 5.6 to 5.7
 
